@@ -42,6 +42,7 @@ message RefreshResponse {
 
 message LoginResponse {
   string token = 1; // Auth token of the logged in user.
+  string refresh_token = 2;
 }
 
 message IsAdminRequest {
