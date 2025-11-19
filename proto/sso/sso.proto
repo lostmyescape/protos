@@ -37,12 +37,11 @@ message RefreshRequest {
 }
 
 message LogoutRequest {
-  string refresh_token = 1;
+  string token = 1;
 }
 
 message LogoutResponse {
-  string token = 1;
-  string refresh_token = 2;
+  bool logout = 1;
 }
 
 message RefreshResponse {
