@@ -41,7 +41,7 @@ message LogoutRequest {
 }
 
 message LogoutResponse {
-  bool logout = 1;
+  string logout = 1;
 }
 
 message RefreshResponse {

@@ -272,7 +272,7 @@ func (x *LogoutRequest) GetToken() string {
 
 type LogoutResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Logout        bool                   `protobuf:"varint,1,opt,name=logout,proto3" json:"logout,omitempty"`
+	Logout        string                 `protobuf:"bytes,1,opt,name=logout,proto3" json:"logout,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -307,11 +307,11 @@ func (*LogoutResponse) Descriptor() ([]byte, []int) {
 	return file_sso_sso_proto_rawDescGZIP(), []int{5}
 }
 
-func (x *LogoutResponse) GetLogout() bool {
+func (x *LogoutResponse) GetLogout() string {
 	if x != nil {
 		return x.Logout
 	}
-	return false
+	return ""
 }
 
 type RefreshResponse struct {
@@ -621,7 +621,7 @@ const file_sso_sso_proto_rawDesc = "" +
 	"\rLogoutRequest\x12\x14\n" +
 	"\x05token\x18\x01 \x01(\tR\x05token\"(\n" +
 	"\x0eLogoutResponse\x12\x16\n" +
-	"\x06logout\x18\x01 \x01(\bR\x06logout\"L\n" +
+	"\x06logout\x18\x01 \x01(\tR\x06logout\"L\n" +
 	"\x0fRefreshResponse\x12\x14\n" +
 	"\x05token\x18\x01 \x01(\tR\x05token\x12#\n" +
 	"\rrefresh_token\x18\x02 \x01(\tR\frefreshToken\"J\n" +
